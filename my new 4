@@ -1,0 +1,56 @@
+task 1 
+
+
+
+def read_and_print_file(filename="sample.txt"):
+    
+    print(f"\n--- Attempting to read '{filename}' ---")
+    
+    with open(filename, 'r') as file:
+        print(f"Content of '{filename}':")
+       
+        for line_number, line in enumerate(file, 1):
+            
+            print(f"Line {line_number}: {line.strip()}")
+        print(f"--- End of '{filename}' content ---")
+
+
+
+read_and_print_file()
+
+task 2 
+import os 
+
+def write_append_and_read_file(filename="sample.txt"): 
+   
+    
+    print(f"\n--- Starting operations on '{filename}' ---")
+
+   
+    user_input_data = input("Enter some text to write to the file: ")
+
+   
+    with open(filename, 'w') as file:
+        file.write(user_input_data + "\n") 
+    print(f"Successfully wrote user input to '{filename}'.")
+
+    
+    additional_data = input("Enter additional text to append to the file: ") + "\n" 
+
+   
+    with open(filename, 'a') as file:
+        file.write(additional_data) 
+    print(f"Successfully appended additional user input to '{filename}'.")
+
+   
+    print(f"\n--- Final content of '{filename}' ---")
+
+   
+    with open(filename, 'r') as file:
+        final_content = file.read()
+        print(final_content.strip())
+    print(f"--- End of '{filename}' content ---")
+
+
+write_append_and_read_file()
+
