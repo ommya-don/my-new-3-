@@ -1,0 +1,45 @@
+task 1
+a=int(input("Enter a number :")) 
+def factorial (n):
+
+    if (n<=1):
+        return 1 
+    else :
+        return n*factorial(n-1)
+
+result=factorial(a)
+
+print("factorial of {} is {}".format(a,result))
+
+
+task 2 
+import math
+
+a=float(input("Enter a number :")) 
+def square_root(n):
+     
+    if (n>=0):
+        return math.sqrt(n)
+    else :
+        return undefine
+    
+result_1 =square_root(a)
+      
+def logarithm(n):
+    if (n>0):
+        return math.log(n)
+    else :
+        return invalid
+    
+result_2= logarithm(a)
+
+def sine(n) :
+ # The math.sin() function works for all real numbers
+    return math.sin(n)
+    
+result_3=sine(a)
+
+
+print("square root : {}".format(result_1))
+print(" logarithm : {} ".format(result_2))
+print ("sine : {}".format(result_3))
